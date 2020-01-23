@@ -20,7 +20,7 @@ $(document).ready(function() {
             this.disabled = true;
             $.ajax({
                 type: "POST",
-                url: "ajax/task/change_status",
+                url: "/ajax/task/change_status",
                 data: {id: task.id, status: +status_info.hasClass(progress)}
             }).done((msg) => {
                 if (checkForRedirect(msg)) {
@@ -53,7 +53,7 @@ $(document).ready(function() {
             this.disabled = true;
             $.ajax({
                 type: "POST",
-                url: "ajax/task/change_text",
+                url: "/ajax/task/change_text",
                 data: {id: task.id, text: text.val()}
             }).done((msg) => {
                 if (checkForRedirect(msg)) {
