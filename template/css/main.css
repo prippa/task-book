@@ -1,0 +1,61 @@
+.task-card {
+    background-color: var(--color-background);
+    padding: 8px;
+    border: solid 1px blue;
+    border-radius: 6px;
+}
+
+.task-card__header {
+    padding: 6px;
+}
+
+.task-card__body {
+    padding: 6px;
+    border-bottom: solid 1px grey;
+    border-top: solid 1px grey;
+    background-color: white;
+}
+
+.task-card__footer {
+    padding: 6px;
+}
+
+.edited-by-admin {
+    color: #5a6268;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.task-completed {
+    font-weight: bold;
+    color: green;
+    font-size: 14px;
+}
+
+.task-in-progress {
+    font-weight: bold;
+    color: orange;
+    font-size: 14px;
+}
+
+.pagination-numbers {
+    padding: 8px;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.pagination-numbers:hover {
+    background-color: aquamarine;
+    color: black;
+}
+
+.active-page {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.sort-link {
+    text-decoration: none;
+}
