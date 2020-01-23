@@ -35,7 +35,7 @@ CREATE TABLE `task` (
   `text` text NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   `edited_by_admin` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `task`
@@ -55,7 +55,7 @@ CREATE TABLE `user` (
   `login` char(32) NOT NULL,
   `password` char(255) NOT NULL,
   `permission` char(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `user`

@@ -20,10 +20,10 @@ class TaskController extends Controller
     {
         $name = $email = $text = '';
 
-        if (!empty($_REQUEST)) {
-            $name = $_REQUEST['name'];
-            $email = $_REQUEST['email'];
-            $text = trim($_REQUEST['text']);
+        if (!empty($_POST)) {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $text = trim($_POST['text']);
 
             if (mb_strlen($name) > Task::NAME_MAX) {
                 $this->view->errors[] = 'Name can be max ' . Task::NAME_MAX . ' symbols';
@@ -47,12 +47,12 @@ class TaskController extends Controller
      */
     public function actionChangeStatus(): void
     {
-        if (empty($_REQUEST) || !User::isAdmin()) {
+        if (empty($_POST) || !User::isAdmin()) {
             exit('login');
         }
 
-        $id = $_REQUEST['id'];
-        $status = $_REQUEST['status'];
+        $id = $_POST['id'];
+        $status = $_POST['status'];
 
         Task::changeStatus($id, $status);
 
@@ -64,12 +64,12 @@ class TaskController extends Controller
      */
     public function actionChangeText(): void
     {
-        if (empty($_REQUEST) || !User::isAdmin()) {
+        if (empty($_POST) || !User::isAdmin()) {
             exit('login');
         }
 
-        $id = $_REQUEST['id'];
-        $text = $_REQUEST['text'];
+        $id = $_POST['id'];
+        $text = $_POST['text'];
 
         Task::changeText($id, $text);
         Task::setEditedByAdmin($id);

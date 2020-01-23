@@ -20,9 +20,9 @@ class UserController extends Controller
     {
         $login = '';
 
-        if (!empty($_REQUEST)) {
-            $login = $_REQUEST['login'];
-            $password = $_REQUEST['password'];
+        if (!empty($_POST)) {
+            $login = $_POST['login'];
+            $password = $_POST['password'];
 
             $user = User::getByLogin($login);
             if (!$user) {
